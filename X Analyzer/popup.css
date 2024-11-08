@@ -1,0 +1,236 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 300px;
+  background-color: #f5f5f5;
+}
+
+.container {
+  padding: 15px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #1DA1F2;
+}
+
+.instruction {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.btn-analyze {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #1DA1F2;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  transition: background-color 0.3s;
+}
+
+.btn-analyze:hover {
+  background-color: #0d8cd9;
+}
+
+.result-container {
+  font-size: 14px;
+  color: #333;
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+  max-height: 200px; /* Define a maximum height for the container */
+  overflow-y: auto;  /* Add vertical scrolling if the content exceeds the max height */
+  white-space: pre-wrap; /* Preserve whitespace and line breaks */
+}
+
+.error {
+  color: red;
+}
+
+.copy-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #1DA1F2;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  transition: background-color 0.3s;
+}
+
+.copy-button:hover {
+  background-color: #0d8cd9;
+}
+
+#analysisType,
+#tokenLimit {
+  display: block;
+  width: 100%; /* Ensures both elements occupy full width of the parent container */
+  padding: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 14px;
+  box-sizing: border-box; /* Includes padding in the width calculation */
+}
+
+
+#tokenLimitLabel {
+  margin-top: 20px; /* Add extra margin above the Maximum Tokens label */
+}
+
+.btn-apply {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #1DA1F2;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 5px;
+  margin-bottom: 20px; /* Adjust this value to add spacing between the button and the label below */
+  transition: background-color 0.3s;
+}
+
+.btn-apply:hover {
+  background-color: #0d8cd9;
+}
+
+/* Advanced Options Button */
+.clickable-heading {
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #1DA1F2;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 15px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.clickable-heading:hover {
+  background-color: #0d8cd9;
+  transform: scale(1.02);
+}
+
+.custom-prompt-container {
+  margin-top: 10px;
+  padding: 5px;
+}
+
+#customPrompt {
+  width: 100%;
+  height: 50px;
+  padding: 5px;
+  font-size: 14px;
+  resize: none;
+}
+
+/* Styling the custom prompt container */
+.custom-prompt-container {
+  margin-top: 10px;
+}
+
+/* Ensure the custom prompt text area and clear button are in the same line */
+.input-group {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* Styling the custom prompt text area */
+#customPrompt {
+  flex-grow: 1; /* Take up remaining space */
+  padding: 5px;
+  resize: none;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+/* Styling the Clear button */
+#clearCustomPrompt {
+  background-color: #1DA1F2;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#clearCustomPrompt:hover {
+  background-color: #0d8cd9;
+}
+
+#modelInput {
+  width: 100%;
+  padding: 5px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.toggle-label {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.toggle-label input[type="checkbox"] {
+  margin-left: 10px; /* Add some space between the text and the checkbox */
+}
+
+.description-text {
+  font-size: 12px;
+  color: #555; /* A soft color to keep it readable without drawing too much attention */
+  margin-top: 5px;
+}
+
+.warning-text {
+  font-size: 12px;
+  font-weight: bold;
+  color: red;
+  margin-top: 5px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.action-button {
+  flex: 1;
+  margin: 5px;
+  font-size: 14px;
+  padding: 8px 12px;
+  background-color: #1DA1F2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.action-button:hover {
+  background-color: #0d8cd9;
+}
+
+.hidden {
+  display: none;
+}

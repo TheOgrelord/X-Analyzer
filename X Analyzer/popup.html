@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>X Analyzer</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">X Analyzer</h1>
+    <p class="instruction">Click the button below to analyze the current profile, trend, or feed on X.</p>
+    <button id="analyzeProfileButton" class="btn-analyze">Analyze</button>
+    <div id="result" class="result-container"></div>
+
+    <!-- Copy to Clipboard and Clear Analysis buttons -->
+    <div class="button-container">
+      <button id="copy" class="action-button" style="display: none;">Copy to Clipboard</button>
+      <button id="clearAnalysis" class="action-button" style="display: none;">Clear Analysis</button>
+    </div>
+
+    <!-- Analysis Type Dropdown -->
+    <label for="analysisType">Select Analysis Type:</label>
+    <select id="analysisType">
+      <option value="marketing">Marketing Analysis</option>
+      <option value="competitor">Competitor Analysis</option>
+      <option value="sentiment">Sentiment Analysis</option>
+      <option value="audience">Audience Analysis</option>
+      <option value="securityaudit">Security Audit</option>
+      <option value="twittertrend">X Trend Analysis</option>
+      <option value="replies">Reply Analysis</option>
+      <option value="political">Political Strategy Analysis</option>
+      <option value="influencer">Influence Analysis</option>
+      <option value="recruitment">Recruitment Analysis</option>
+      <option value="reputation">Reputation Analysis</option>
+      <option value="frauddetection">Fraud Detection</option>
+      <option value="research">Academic/Social Research</option>
+    </select>
+
+    <!-- Maximum Tokens Input -->
+    <div class="token-limit-container">
+      <label for="tokenLimit">Maximum Tokens:</label>
+      <input type="number" id="tokenLimit" min="1" max="4096" value="800">
+    </div>
+
+    <!-- Advanced Options Section -->
+    <div class="advanced-options-container">
+      <h3 id="advancedOptionsToggle" class="clickable-heading">Advanced Options ▼</h3>
+      <div id="advancedOptionsContent" class="advanced-content hidden">
+
+                <!-- Custom Prompt Input -->
+        <div class="custom-prompt-container">
+          <label for="customPrompt">Custom Prompt (optional):</label>
+          <textarea id="customPrompt" maxlength="150" placeholder="Enter a custom prompt..."></textarea>
+          <button id="clearCustomPrompt" class="btn-small">Clear</button> <!-- New clear button -->
+        </div>
+
+        <div class="input-group">
+          <label for="modelInput">OpenAI Model (optional):</label>
+          <input type="text" id="modelInput" placeholder="Default: gpt-4o-mini">
+        </div>      
+
+        <div class="toggle-display-setting">
+          <label for="toggleContentOptimization" class="toggle-label">
+            Optimize Feed Content: <input type="checkbox" id="toggleContentOptimization">
+          </label>
+          <p id="optimizeDescription" class="description-text">Blocks non-text content to reduce screen space usage and lag.</p>
+        </div>        
+        
+        <div class="toggle-display-setting">
+          <label for="toggleDisplayMode" class="toggle-label">
+            Load All Tweets: <input type="checkbox" id="toggleDisplayMode">
+          </label>
+          <p id="displayWarning" class="warning-text">WARNING: Enabling this will break the page and can load large amounts of data, potentially causing lag, 429 errors, and using many OpenAI tokens. Use at your own risk.</p>
+        </div>
+
+      </div>        
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
